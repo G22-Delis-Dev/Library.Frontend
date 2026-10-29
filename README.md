@@ -31,21 +31,20 @@ npm install
 
 ## 🏃 Ejecución
 
-### Modo Desarrollo (con proxy)
+### Modo Desarrollo (Recomendado)
 ```bash
-npm start -- --port 4201 --proxy-config proxy.conf.json
-```
-
-La aplicación estará disponible en: **http://localhost:4201**
-
-### Modo Desarrollo (sin proxy)
-```bash
-npm start
+npm start -- --proxy-config proxy.conf.json
 ```
 
 La aplicación estará disponible en: **http://localhost:4200**
 
-> **Nota:** Se recomienda usar el modo con proxy para evitar problemas de CORS y certificados HTTPS.
+> **⚠️ IMPORTANTE:** El backend CORS está configurado para aceptar **solo el puerto 4200**. No cambies el puerto o las peticiones serán bloqueadas por CORS.
+
+### ¿Por qué usar el proxy?
+- ✅ Evita errores de CORS
+- ✅ Maneja certificados HTTPS locales sin errores
+- ✅ Simplifica la configuración de desarrollo
+- ✅ El proxy redirige `/api` a `https://localhost:7099/api`
 
 ## 🏗️ Construcción
 
