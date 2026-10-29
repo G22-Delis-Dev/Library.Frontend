@@ -4,7 +4,7 @@ import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Author } from './models';
 
-const API = 'http://localhost:5292/api';
+const API = '/api';
 
 @Injectable({ providedIn: 'root' })
 export class AuthorsService {
